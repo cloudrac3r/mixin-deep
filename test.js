@@ -49,6 +49,18 @@ describe('.mixinDeep()', function() {
     assert.notDeepEqual(actual, obj3);
   });
 
+  it('again, it should deeply copy properties onto the first object without modifying other sub-objects', function() {
+    const obj1 = { a: { b: { x: 50 } } };
+    const obj2 = { a: { b: { y: 50 } } };
+
+    const actual = { a: { b: { x: 50, y: 50 } } };
+
+    assert.deepEqual(mixinDeep({}, obj1, obj2), actual);
+    assert.notDeepEqual(actual, obj1);
+    assert.notDeepEqual(actual, obj2);
+    assert.equal("y" in obj1.a.b, false) // ensure obj1, the second argument, has not been modified
+  });
+
   it('should mixin nested object properties', function() {
     const obj1 = { a: { b: 1, c: 1, d: { e: 1, f: 1 } } };
     const obj2 = { a: { b: 2, d: { f: 'f' } } };

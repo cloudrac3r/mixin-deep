@@ -1,12 +1,15 @@
 {
-  "name": "mixin-deep",
+  "name": "@cloudrac3r/mixin-deep",
   "description": "Deeply mix the properties of objects into the first object. Like merge-deep, but doesn't clone. No dependencies.",
-  "version": "3.0.0",
-  "homepage": "https://github.com/jonschlinkert/mixin-deep",
-  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
-  "repository": "jonschlinkert/mixin-deep",
+  "version": "3.0.1",
+  "homepage": "https://github.com/cloudrac3r/mixin-deep",
+  "author": "Cadence Ember (https://github.com/cloudrac3r)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloudrac3r/mixin-deep.git"
+  },
   "bugs": {
-    "url": "https://github.com/jonschlinkert/mixin-deep/issues"
+    "url": "https://github.com/cloudrac3r/mixin-deep/issues"
   },
   "license": "MIT",
   "files": [
@@ -23,6 +26,7 @@
     "gulp-format-md": "^2.0.0",
     "mocha": "^6.1.4"
   },
+  "private": false,
   "keywords": [
     "assign",
     "deep",

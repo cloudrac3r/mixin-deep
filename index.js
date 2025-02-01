@@ -28,7 +28,7 @@ function mixin(target, val, key) {
   } else if (!(key in target) && isObject(val)) {
     // `target` can be mutated by later mixins. Therefore, if we are currently adding an object to `target`,
     // it could be mutated later. We need to make sure that mutation will not change the original data.
-    target[key] = {...val};
+    target[key] = mixinDeep({}, val);
   } else {
     target[key] = val;
   }
